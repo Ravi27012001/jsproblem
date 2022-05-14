@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1.
+    var Minimal_Angle = (h, m) => 
+    {
+        let hrAngle = 0.5*(h*60+m);
+        let minAngle = m*6;
+        let angle = Math.abs(hrAngle - minAngle);
+        let accAngle = Math.min(360-angle,angle);
+        return accAngle;
+    };
+     
+2. 
+var Check_Leap = (year) => 
+{
+ if (year % 4 ==0 && year % 100!==0 || year % 400==0 ){
+   return "Leap Year";
+ }
+ else{
+   return "Non Leap Year";
+ }
+  
+
+};
+ 
+3. 
+var Perfect_Check = (N) => 
+{
+  let res = 0;
+  for (let x = 1; x<N ; x++){
+    if (N%x == 0){
+      res = res + x ;
+    }
+ 
+    
+  }
+    if (N == res ){``
+      return "YES"
+    }   
+    else{
+      return "NO"
+    }
+};
+ 
+  4. 
+  var Reverse_Number = (N) => 
+  {
+  let reverse = 0;
+              let last;
+              while(N!==0){
+                last = N % 10;
+                reverse = reverse * 10 + last;
+                N = parseInt(N/10);
+              }
+            return reverse;
+  
+  };
+   
+5.
+var Substring_Check = (S1, S2) => 
+{
+  if(S1.includes(S2)){
+    return "YES"
+  }   
+  else{
+    return "NO"
+  }
+};
+ 
+  
+
+    
+</body>
+</html>
